@@ -1,25 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    //public int fears;
-    
-    //public void AddScore()
-    //{
-     //   fears++;
-    //}
+    public static int scoreValue = 0;
+    Text score;
 
-   // public void EndGame()
-    //{
-    //    if(fears <= 3)
-     //   {
-     //       
-     //   }
-     //   else if(fears >= 3)
-     //   {
-     //
-      //  }
-   // }
+
+    private void Start()
+    {
+        score = GetComponent<Text>();
+    }
+
+    private void Update()
+    {
+        score.text = "Fears:" + scoreValue;
+    }
+
+
+    public void EndGame()
+    {
+        //if(fears <= 3)
+        //{
+         //   print("You Win!");
+        //}
+        
+        
+    }
+
 }
